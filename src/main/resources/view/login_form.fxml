@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="583.0" prefWidth="823.0" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginFormController">
+   <children>
+      <AnchorPane fx:id="registerForm" prefHeight="547.0" prefWidth="765.0" styleClass="white-bg" stylesheets="@../style/style.css">
+         <children>
+            <ImageView fitHeight="508.0" fitWidth="471.0" layoutX="352.0" layoutY="56.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/2010.i606.001..online%20medicine%20set-14.jpg" />
+               </image>
+            </ImageView>
+            <AnchorPane layoutX="20.0" layoutY="16.0" prefHeight="550.0" prefWidth="341.0" stylesheets="@../style/style.css">
+               <children>
+                  <Label layoutX="110.0" layoutY="16.0" text="Register">
+                     <font>
+                        <Font name="Poppins Black" size="27.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField layoutX="39.0" layoutY="145.0" prefHeight="47.0" prefWidth="262.0" promptText="Email" />
+                  <JFXPasswordField layoutX="38.0" layoutY="288.0" prefHeight="39.0" prefWidth="262.0" promptText="Password" />
+                  <JFXCheckBox checkedColor="#3674b5" layoutX="40.0" layoutY="337.0" text="Show Password" />
+                  <JFXButton layoutX="33.0" layoutY="441.0" prefHeight="47.0" prefWidth="262.0" style="-fx-background-color: #3674B5;" text="Register" textFill="WHITE">
+                     <font>
+                        <Font name="Poppins Bold" size="16.0" />
+                     </font>
+                  </JFXButton>
+                  <Label layoutX="79.0" layoutY="507.0" text="Do you have account?" />
+                  <JFXComboBox layoutX="38.0" layoutY="377.0" prefHeight="39.0" prefWidth="262.0" promptText="Select User" />
+                  <Hyperlink fx:id="hyperSignIn" layoutX="199.0" layoutY="504.0" text="Sign in" onAction="#switchForm" />
+                  <FontAwesomeIconView glyphName="USER_MD" layoutX="137.0" layoutY="133.0" size="70" />
+                  <JFXTextField layoutX="38.0" layoutY="212.0" prefHeight="47.0" prefWidth="262.0" promptText="Username" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="loginForm" prefHeight="547.0" prefWidth="765.0" styleClass="white-bg" stylesheets="@../style/style.css">
+         <children>
+            <ImageView fitHeight="508.0" fitWidth="471.0" layoutX="14.0" layoutY="56.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/2010.i606.001..online%20medicine%20set-08.jpg" />
+               </image>
+            </ImageView>
+            <AnchorPane layoutX="464.0" layoutY="14.0" prefHeight="550.0" prefWidth="341.0" stylesheets="@../style/style.css">
+               <children>
+                  <Label layoutX="126.0" layoutY="41.0" text="Login">
+                     <font>
+                        <Font name="Poppins Black" size="27.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="txtUsername" layoutX="39.0" layoutY="181.0" prefHeight="47.0" prefWidth="262.0" promptText="Username" />
+                  <JFXPasswordField fx:id="txtPassword" layoutX="39.0" layoutY="253.0" prefHeight="39.0" prefWidth="262.0" promptText="Password" />
+                  <JFXCheckBox fx:id="chkShowPassword" checkedColor="#3674b5" layoutX="39.0" layoutY="306.0" text="Show Password" />
+                  <JFXButton layoutX="39.0" layoutY="356.0" prefHeight="47.0" prefWidth="262.0" style="-fx-background-color: #3674B5;" text="Login" textFill="WHITE">
+                     <font>
+                        <Font name="Poppins Bold" size="16.0" />
+                     </font>
+                  </JFXButton>
+                  <Label layoutX="91.0" layoutY="507.0" text="Don't have account?" />
+                  <JFXComboBox fx:id="cmbSelectUser" layoutX="74.0" layoutY="432.0" prefHeight="26.0" prefWidth="193.0" promptText="Select User" />
+                  <Hyperlink fx:id="hyperSignUp" layoutX="199.0" layoutY="504.0" text="Sign up" onAction="#switchForm" />
+                  <FontAwesomeIconView glyphName="USER_MD" layoutX="137.0" layoutY="157.0" size="70" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

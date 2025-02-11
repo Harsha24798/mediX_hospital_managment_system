@@ -1,0 +1,15 @@
+.white-bg {
+    -fx-background-color: #fff;
+}
+
+.radius {
+    -fx-background-radius: 50px;
+}
+
+.shadow {
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 5,0,0,0);;
+}
+
+.bg-color-1 {
+    -fx-background-color: linear-gradient(to bottom right, #188ba7, #306090);
+}
