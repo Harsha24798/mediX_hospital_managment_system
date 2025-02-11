@@ -1,3 +1,6 @@
+import com.google.inject.Guice;
+import com.google.inject.Injector;
+import config.AppModule;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -12,9 +15,12 @@ public class Stater extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("view/login_form.fxml"))));
-//        stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("view/dashboard_form.fxml"))));
-        stage.initStyle(StageStyle.UNDECORATED);
+        Injector injector = Guice.createInjector(new AppModule());
+
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("view/login_form.fxml"));
+        fxmlLoader.setControllerFactory(injector::getInstance);
+
+        stage.setScene(new Scene(fxmlLoader.load()));
         stage.show();
     }
 }
