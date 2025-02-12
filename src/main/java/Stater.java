@@ -17,7 +17,7 @@ public class Stater extends Application {
     public void start(Stage stage) throws Exception {
         Injector injector = Guice.createInjector(new AppModule());
 
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("view/login_form.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("view/admin_dashboard_form.fxml"));
         fxmlLoader.setControllerFactory(injector::getInstance);
 
         stage.setScene(new Scene(fxmlLoader.load()));
